@@ -1,0 +1,25 @@
+{
+  "name": "unn-api",
+  "version": "0.0.0",
+  "description": "The server for Utah Node Ninjas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Utah-Node-Ninjas/unn-api.git"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "server",
+    "utah"
+  ],
+  "author": "Utah Node Ninjas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Utah-Node-Ninjas/unn-api/issues"
+  },
+  "homepage": "https://github.com/Utah-Node-Ninjas/unn-api"
+}

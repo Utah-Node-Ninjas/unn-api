@@ -13,12 +13,14 @@ var transporter = nodemailer.createTransport({
 });
 
 
-function sendMail(mailOptions) {
+function sendMail(mailOptions, callback) {
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
         } else {
             console.log('Message sent: ' + info.response);
+            if (typeof callback === 'function')
+                callback();
         }
     });
 }

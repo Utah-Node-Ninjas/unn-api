@@ -12,18 +12,16 @@ var mailOptions = {
     html: '<b>Bold Mocha test</b>' // html body
 };
 
-email.sendEmail(mailOptions); worked when running direction with node, not mocha
-
-//TODO need to get this commentted section functional, might need a callback, and use done()
-/*describe('email', function(){
-    describe('#sendEmail()', function(){
-        it('should return send email to ' + secrets.emailInfo.user, function(){
-            email.sendEmail(mailOptions);
+describe('email', function() {
+    this.timeout(5000); //increase timeout from default 2000ms
+    describe('#sendEmail()', function() {
+        it('should return send email to ' + secrets.emailInfo.user, function(done) {
+            email.sendEmail(mailOptions, function() {
+                done();
+                //TODO assert some things
+            });
         })
     })
-})    */
+});
 
-
-console.log('Done!');
-//manual test for now
-//TODO assert some things
+console.log('EOF!');

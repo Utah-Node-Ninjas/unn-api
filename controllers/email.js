@@ -40,18 +40,19 @@ exports.landingPage = function (req, res) {
 
   function emailUNN(body) {
     emailTemplates(templateOptions, function (err, render) {
-      var context = req.body;
-      render('interestedParty.html', context, function (err, html) {
+      render('interestedParty.html', body, function (err, html) {
         if (err) {
           console.log('emailTemplates err', err);
+          res.send(500);
         } else {
           var emailOptions = {
             from: 'Utah Node Ninjas <utahnodeninjas@gmail.com>',
-            to: body.email,
+            to: 'utahnodeninjas@gmail.com',
             subject: 'Someone Reaching Out',
             html: html
           };
           sendMail(emailOptions);
+          res.send(200);
         }
       });
     });

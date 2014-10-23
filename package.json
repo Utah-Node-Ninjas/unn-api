@@ -4,7 +4,8 @@
   "description": "The server for Utah Node Ninjas",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/Utah-Node-Ninjas/unn-api",
   "dependencies": {
     "nodemailer": "^1.3.0",
-    "swig-email-templates": "^1.3.0"
+    "swig-email-templates": "^1.3.0",
+    "restify": "^2.8.2"
   }
 }
